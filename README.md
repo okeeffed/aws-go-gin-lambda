@@ -10,6 +10,17 @@ For the function, to build run:
 GOOS=linux GOARCH=amd64 go build -o main main.go
 ```
 
+The targets are required for Go lambdas.
+
+### Running the function
+
+After deploying, use the URL given back and run:
+
+```s
+> curl https://url-example.us-east-1.amazonaws.com/prod/ping
+{"message":"pong"}
+```
+
 ## Infra
 
 ### Deploying
