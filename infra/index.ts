@@ -30,11 +30,11 @@ export class LambdaCronStack extends cdk.Stack {
       ),
       timeout: cdk.Duration.seconds(300),
       runtime: lambda.Runtime.GO_1_X,
-      handler: 'index.handler',
+      handler: 'main',
     });
 
     // API Gateway
-    const gateway = new apigw.LambdaRestApi(
+    new apigw.LambdaRestApi(
       // @ts-ignore - this expects Construct not cdk.Construct :thinking:
       this,
       'HelloGoServerLambdaFnEndpoint',
@@ -42,8 +42,6 @@ export class LambdaCronStack extends cdk.Stack {
         handler: lambdaFn,
       },
     );
-
-    console.log(gateway.url);
   }
 }
 
