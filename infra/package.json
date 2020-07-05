@@ -1,0 +1,35 @@
+{
+  "name": "lambda-cron",
+  "version": "1.0.0",
+  "description": "Running a Lambda on a schedule",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy",
+    "synth": "cdk synth"
+  },
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com",
+    "organization": true
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^10.17.26",
+    "typescript": "~3.7.2"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.49.1",
+    "@aws-cdk/aws-events": "*",
+    "@aws-cdk/aws-events-targets": "*",
+    "@aws-cdk/aws-lambda": "*",
+    "@aws-cdk/aws-s3-assets": "^1.46.0",
+    "@aws-cdk/core": "*",
+    "@types/dotenv": "^8.2.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  }
+}
