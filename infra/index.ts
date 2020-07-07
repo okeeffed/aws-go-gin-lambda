@@ -4,13 +4,11 @@ import cdk = require('@aws-cdk/core');
 import assets = require('@aws-cdk/aws-s3-assets');
 import path = require('path');
 
-require('dotenv').config();
-
 export class LambdaCronStack extends cdk.Stack {
   constructor(app: cdk.App, id: string) {
     super(app, id);
 
-    // The following JavaScript example defines an directory
+    // The following Golang example defines an directory
     // asset which is archived as a .zip file and uploaded to
     // S3 during deployment.
     // See https://docs.aws.amazon.com/cdk/api/latest/docs/aws-s3-assets-readme.html
